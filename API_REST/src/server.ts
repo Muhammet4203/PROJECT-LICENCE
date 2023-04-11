@@ -4,9 +4,11 @@ import { addUser, getAllUsers, getUserById, deleteUser } from './handlers/User';
 import { addTask, getAllTasks, getTaskById, getTasksByUser, deleteTask } from './handlers/Task';
 
 const port: number = 8080;
+var cors = require('cors');
 
 const app: Application = express();
 app.use(express.json());
+app.use(cors());
 
 //Routes for users
 app.post('/users', addUser);

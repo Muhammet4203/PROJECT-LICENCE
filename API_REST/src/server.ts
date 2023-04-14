@@ -1,5 +1,5 @@
 import express, { Application, Request, Response } from 'express';
-import  { connect } from 'mongoose';
+import { connect } from 'mongoose';
 import { addUser, getAllUsers, getUserById, deleteUser } from './handlers/User';
 import { addTask, getAllTasks, getTaskById, getTasksByUser, deleteTask } from './handlers/Task';
 
@@ -13,7 +13,7 @@ app.use(cors());
 //Routes for users
 app.post('/users', addUser);
 app.get('/users', getAllUsers );
-app.get('/users/:id', getUserById);
+app.get('/user/:id', getUserById);
 app.delete('/deleteuser/:id', deleteUser);
 
 //Routes for tasks

@@ -1,7 +1,5 @@
 import mongoose, { Schema , Model , model } from "mongoose";
 import { User, IUser } from "./User";
-import { finished } from "stream";
-import { boolean } from "webidl-conversions";
 
 interface ITask {
     title : string;
@@ -18,7 +16,7 @@ const TaskSchema  = new Schema<ITask>({
     description : {type : String},
     category : {type : String},
     user: {type: Schema.Types.ObjectId,ref: 'User'},
-    cdate : {type : Date,required : false},
+    cdate : {type : Date,default :Date.now()},
     edate : {type : Date},
     finishTask : {type : Boolean}
 });

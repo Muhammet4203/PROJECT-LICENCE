@@ -18,7 +18,6 @@ const TaskSchema  = new Schema<ITask>({
     user: {type: Schema.Types.ObjectId,ref: 'User'},
     cdate : {type : Date},
     edate : {type : Date},
-    finishTask : {type : Boolean}
 });
 
 const Task : Model<ITask> = model('Task',TaskSchema);

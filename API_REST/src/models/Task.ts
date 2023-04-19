@@ -16,7 +16,7 @@ const TaskSchema  = new Schema<ITask>({
     description : {type : String},
     category : {type : String},
     user: {type: Schema.Types.ObjectId,ref: 'User'},
-    cdate : {type : Date,default :Date.now()},
+    cdate : {type : Date},
     edate : {type : Date},
     finishTask : {type : Boolean}
 });
